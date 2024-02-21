@@ -57,7 +57,9 @@ class WebformSubmissionTags extends ProcessorPluginBase {
         foreach ($tags as $tag) {
           // Get the tag name from taxonomy term id.
           $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tag);
-          $field->addValue($term->getName());
+          if ($term) {
+            $field->addValue($term->getName());
+          }
         }
       }
     }
