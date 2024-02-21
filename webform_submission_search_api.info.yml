@@ -1,0 +1,9 @@
+name: Webform Submission Search API
+description: 'Search API support for webform submissions.'
+core_version_requirement: ^9.4 || ^10
+type: module
+package: Search
+configure: webform_submission_search_api.admin
+dependencies:
+  - webform:webform
+  - search_api:search_api

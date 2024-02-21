@@ -1,0 +1,23 @@
+{
+  "name": "necyberteam/webform_submission_search_api",
+  "description": "Index fields from Webform Submissions for Search API ",
+  "type": "drupal-custom-module",
+  "license": "MIT",
+  "keywords": [
+    "Drupal"
+  ],
+  "authors": [
+    {
+      "name": "Andrew Pasquale",
+      "email": "andrew@elytra.net"
+    }
+  ],
+  "require": {
+    "drupal/webform": "^6",
+    "drupal/search_api": "^1.3"
+  },
+  "support": {
+    "issues": "https://github.com/necyberteam/webform_submission_search_api/issues",
+    "source": "https://github.com/necyberteam/webform_submission_search_api"
+  }
+}
