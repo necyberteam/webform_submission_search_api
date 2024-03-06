@@ -1,0 +1,9 @@
+services:
+  webform_submission_search_api.reindex:
+    class: Drupal\webform_submission_search_api\WebformSubmissionSearchApiReindexService
+    arguments: ['@config.factory']
+  webform_submission_search_api.event_subscriber:
+    class: Drupal\webform_submission_search_api\EventSubscriber\WebformSubmissionSearchApiSubscriber
+    arguments: ['@webform_submission_search_api.reindex']
+    tags:
+      - { name: event_subscriber }
