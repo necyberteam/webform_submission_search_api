@@ -2,7 +2,7 @@
 
 The Webform Submission Search API module provides search_api processors to index fields on Webform Submissions.
 
-Included are the Title, Description, and Tags field.
+Included are examples for the Title, Description, text, Flagging, and Taxonomy reference fields.
 
 Once indexed, the fields can be used elsewhere, e.g. in Views.
 
