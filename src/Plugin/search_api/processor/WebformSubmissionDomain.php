@@ -47,7 +47,14 @@ class WebformSubmissionDomain extends ProcessorPluginBase {
    * {@inheritdoc}
    */
   public function addFieldValues(ItemInterface $item) {
-    $webform_submission = $item->getOriginalObject()->getValue();
+    $entity = $item->getOriginalObject()->getValue();
+    
+    // Only process webform submission entities
+    if (!$entity instanceof \Drupal\webform\WebformSubmissionInterface) {
+      return;
+    }
+    
+    $webform_submission = $entity;
     $tags = $webform_submission->getElementData('domain');
 
     if ($tags) {
